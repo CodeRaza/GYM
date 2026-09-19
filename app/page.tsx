@@ -1,14 +1,13 @@
-import Image from "next/image";
 import Link from "next/link";
 import { HeroVideo } from "@/components/hero-video";
 import { GoogleReviews } from "@/components/google-reviews";
+import { CoachSection } from "@/components/coach-section";
 import {
   ArrowRight,
   BadgeCheck,
   Check,
   Dumbbell,
   MapPin,
-  Medal,
   MoveRight,
   Sparkles,
   Target,
@@ -51,7 +50,7 @@ export default function Home() {
             <p className="hero-lead">A focused gym for people who want real strength, better fitness, and the discipline to keep progressing.</p>
             <div className="hero-actions">
               <Link className="button" href="/contact#contact-form">Plan your first visit <ArrowRight size={19} aria-hidden="true" /></Link>
-              <a className="text-link" href="#experience">Explore the gym <MoveRight size={20} aria-hidden="true" /></a>
+              <Link className="text-link" href="/equipment">Explore the gym <MoveRight size={20} aria-hidden="true" /></Link>
             </div>
             <div className="hero-proof" aria-label="Club highlights">
               <span><Check aria-hidden="true" /> Modern equipment</span>
@@ -110,26 +109,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section coach-section" id="coach">
-        <div className="container coach-grid">
-          <div className="coach-photo">
-            <Image src="/media/coach-nouman.webp" alt="Coach Nauman Ismail at RI Fitness Club" fill sizes="(max-width: 820px) 100vw, 45vw" />
-            <div className="coach-stamp"><Medal aria-hidden="true" /><span>Certified<br />Trainer</span></div>
-          </div>
-          <div className="coach-copy">
-            <span className="eyebrow">Meet your coach</span>
-            <h2>Guidance backed by experience.</h2>
-            <p className="coach-name">Nauman Ismail</p>
-            <p>Training is more than showing up—it is learning how to move well, stay consistent, and earn progress. Coach Nauman brings a hands-on, focused approach to every member&apos;s journey.</p>
-            <div className="credentials">
-              <span><Check aria-hidden="true" /> Certified gym fitness trainer</span>
-              <span><Check aria-hidden="true" /> Gold medalist</span>
-              <span><Check aria-hidden="true" /> M.Sc. Mathematics</span>
-            </div>
-            <Link className="text-link green-link" href="/contact#contact-form">Talk about your training goal <ArrowRight size={19} aria-hidden="true" /></Link>
-          </div>
-        </div>
-      </section>
+      <CoachSection />
 
       <section className="section process-section">
         <div className="container">

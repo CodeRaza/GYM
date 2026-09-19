@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ContactForm } from "@/components/contact-form";
 import { GoogleReviews } from "@/components/google-reviews";
 import { Clock3, Mail, MapPin, Phone } from "lucide-react";
@@ -43,6 +44,20 @@ export default function ContactPage() {
             <div className="detail-card no-link">
               <span className="detail-icon"><Clock3 aria-hidden="true" /></span>
               <span><small>Before you visit</small><strong>Email for today&apos;s timings</strong></span>
+            </div>
+            <div className="contact-coach-preview">
+              <div className="contact-coach-avatar">
+                <Image
+                  src="/media/coach-nauman.webp"
+                  alt="Coach Nauman Ismail"
+                  fill
+                  sizes="80px"
+                />
+              </div>
+              <div className="contact-coach-text">
+                <strong>Coach Nauman Ismail</strong>
+                <p>Available on-site to walk you through the gym, discuss your goals, and set up your training plan.</p>
+              </div>
             </div>
             <div className="contact-note">
               <strong>Your first visit, made easy.</strong>
