@@ -2,6 +2,7 @@ import Link from "next/link";
 import { HeroVideo } from "@/components/hero-video";
 import { GoogleReviews } from "@/components/google-reviews";
 import { CoachSection } from "@/components/coach-section";
+import { MembershipHighlight } from "@/components/membership-highlight";
 import {
   ArrowRight,
   BadgeCheck,
@@ -9,6 +10,7 @@ import {
   Dumbbell,
   MapPin,
   MoveRight,
+  Smartphone,
   Sparkles,
   Target,
   Users,
@@ -44,18 +46,20 @@ export default function Home() {
       <section className="hero">
         <div className="hero-grid container">
           <div className="hero-copy">
-            <div className="status-pill"><span /> Now welcoming new members</div>
+            <Link href="/membership" className="status-pill" style={{ textDecoration: "none" }}>
+              <span /> Limited 155 Seats · First 50 Free Training
+            </Link>
             <p className="hero-kicker">RI Fitness Club · Lahore</p>
             <h1>Train harder.<br /><span>Live stronger.</span></h1>
             <p className="hero-lead">A focused gym for people who want real strength, better fitness, and the discipline to keep progressing.</p>
             <div className="hero-actions">
-              <Link className="button" href="/contact#contact-form">Plan your first visit <ArrowRight size={19} aria-hidden="true" /></Link>
+              <Link className="button" href="/membership">View Membership & Offers <ArrowRight size={19} aria-hidden="true" /></Link>
               <Link className="text-link" href="/equipment">Explore the gym <MoveRight size={20} aria-hidden="true" /></Link>
             </div>
             <div className="hero-proof" aria-label="Club highlights">
               <span><Check aria-hidden="true" /> Modern equipment</span>
               <span><Check aria-hidden="true" /> Expert guidance</span>
-              <span><Check aria-hidden="true" /> All fitness levels</span>
+              <span><Smartphone aria-hidden="true" /> Free Member App</span>
             </div>
           </div>
           <div className="hero-visual">
@@ -86,6 +90,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <MembershipHighlight />
 
       <section className="section experience" id="experience">
         <div className="container experience-grid">

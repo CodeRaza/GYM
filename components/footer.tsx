@@ -13,6 +13,8 @@ export function Footer() {
         <div>
           <p className="footer-title">Explore</p>
           <div className="footer-links">
+            <Link href="/membership">Membership & Offers</Link>
+            <Link href="/equipment">Equipment</Link>
             <Link href="/#training">Training</Link>
             <Link href="/#experience">The Gym</Link>
             <Link href="/#coach">Coach</Link>

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { Camera, Expand, X, Dumbbell, ShieldCheck, Sparkles } from "lucide-react";
+import { Expand, X } from "lucide-react";
 
 interface GalleryItem {
   id: string;

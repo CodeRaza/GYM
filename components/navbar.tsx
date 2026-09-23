@@ -7,9 +7,9 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const links = [
-  { href: "/#training", label: "Training" },
-  { href: "/#experience", label: "Tour" },
+  { href: "/membership", label: "Membership", badge: "Offer" },
   { href: "/equipment", label: "Equipment" },
+  { href: "/#training", label: "Training" },
   { href: "/#coach", label: "Coach" },
   { href: "/contact", label: "Contact" },
 ];
@@ -31,11 +31,28 @@ export function Navbar() {
             return (
               <Link key={link.href} href={link.href} className={isActive ? "is-active" : undefined} aria-current={isActive ? "page" : undefined}>
                 {link.label}
+                {link.badge && (
+                  <span
+                    style={{
+                      marginLeft: "6px",
+                      fontSize: "0.66rem",
+                      background: "var(--yellow)",
+                      color: "var(--black)",
+                      padding: "2px 6px",
+                      borderRadius: "3px",
+                      fontWeight: 900,
+                      letterSpacing: "0.03em",
+                      lineHeight: 1,
+                    }}
+                  >
+                    {link.badge}
+                  </span>
+                )}
               </Link>
             );
           })}
         </nav>
-        <Link className="button button-small nav-cta" href="/contact#contact-form">Join the Club</Link>
+        <Link className="button button-small nav-cta" href="/membership">Join the Club</Link>
         <button
           className="menu-button"
           type="button"
@@ -54,10 +71,25 @@ export function Navbar() {
             return (
               <Link key={link.href} href={link.href} className={isActive ? "is-active" : undefined} aria-current={isActive ? "page" : undefined} onClick={() => setOpen(false)}>
                 {link.label}
+                {link.badge && (
+                  <span
+                    style={{
+                      marginLeft: "6px",
+                      fontSize: "0.66rem",
+                      background: "var(--yellow)",
+                      color: "var(--black)",
+                      padding: "2px 6px",
+                      borderRadius: "3px",
+                      fontWeight: 900,
+                    }}
+                  >
+                    {link.badge}
+                  </span>
+                )}
               </Link>
             );
           })}
-          <Link className="button" href="/contact#contact-form" onClick={() => setOpen(false)}>Join the Club</Link>
+          <Link className="button" href="/membership" onClick={() => setOpen(false)}>Join the Club</Link>
         </nav>
       )}
     </header>
