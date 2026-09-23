@@ -319,13 +319,20 @@ a.detail-card:hover { background: white; border-color: #65bb38; }
   .review-cards { grid-template-columns: repeat(2, 1fr); }
 }
 
+@media (max-width: 768px) {
+  .status-pill { margin-inline: auto; display: flex; width: fit-content; }
+  .hero-kicker { text-align: center; }
+  .hero h1 { text-align: center; margin-inline: auto; }
+  .hero-lead { text-align: center; margin-inline: auto; }
+}
+
 @media (max-width: 560px) {
   .container { width: calc(100% - 28px); }
   .nav-wrap { height: 64px; }
   .brand { width: 158px; }
   .hero-grid { min-height: auto; padding-top: 3.5rem; }
-  .hero h1 { font-size: clamp(3.5rem, 18vw, 5rem); }
-  .hero-lead { font-size: .97rem; }
+  .hero h1 { font-size: clamp(3.5rem, 18vw, 5rem); text-align: center; margin-inline: auto; }
+  .hero-lead { font-size: .97rem; text-align: center; margin-inline: auto; }
   .hero-actions { align-items: stretch; flex-direction: column; gap: .8rem; }
   .hero-actions .text-link { justify-content: center; }
   .hero-proof { display: grid; gap: .7rem; }
