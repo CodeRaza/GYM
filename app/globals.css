@@ -263,6 +263,103 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus { border-color: #55a72c; box-shadow: 0 0 0 3px rgba(85,167,44,.15); }
 .form-submit { width: 100%; margin-top: .5rem; }
 .form-success { display: flex; align-items: center; gap: .45rem; color: #327616; font-size: .82rem; font-weight: 750; margin: 1rem 0 0; }
+
+/* Contact Owner Card */
+.contact-owner-card {
+  background: #111512;
+  border: 1px solid var(--line);
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+.contact-owner-media {
+  position: relative;
+  width: 100%;
+  height: clamp(380px, 45vw, 540px);
+  background: radial-gradient(circle at 50% 35%, #1c241e 0%, #0b0f0c 100%);
+  overflow: hidden;
+}
+
+.contact-owner-image {
+  object-fit: contain;
+  object-position: center center;
+  padding: 1rem 0.5rem 0.5rem;
+  transition: transform 0.4s ease;
+}
+
+.contact-owner-card:hover .contact-owner-image {
+  transform: scale(1.02);
+}
+
+.contact-owner-badge {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  z-index: 2;
+  background: rgba(7, 10, 8, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(114, 211, 54, 0.45);
+  color: var(--green-bright);
+  padding: 0.45rem 0.9rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.contact-owner-overlay {
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 60px;
+  background: linear-gradient(to top, #111512 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.contact-owner-body {
+  padding: clamp(1.5rem, 3.5vw, 2.4rem);
+  background: #111512;
+}
+
+.contact-owner-tag {
+  color: var(--green);
+  font-size: 0.8rem;
+  font-weight: 850;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin: 0 0 0.4rem;
+}
+
+.contact-owner-body h2 {
+  font-family: var(--heading);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.65rem;
+  color: #ffffff;
+}
+
+.contact-owner-creds {
+  color: #cbd3cc;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+}
+
+.contact-owner-desc {
+  color: #a4aba5;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin: 0 0 1.6rem;
+}
+
+.contact-owner-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
 .contact-details { display: grid; gap: .85rem; }
 .details-heading { margin-bottom: 1.2rem; }
 .detail-card { min-height: 92px; display: flex; align-items: center; gap: 1rem; border: 1px solid #d6dbd4; padding: 1rem; transition: background 180ms ease, border-color 180ms ease; }
